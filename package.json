@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "html2pdf.js": "^0.10.2",
+    "nanoid": "^5.0.8"
+  }
+}
