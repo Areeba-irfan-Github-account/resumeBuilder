@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="index.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 </head>
+
 <body>
     <div class="container">
         <div id="resumeForm" class="form-container">
@@ -134,8 +135,9 @@
                 <button type="submit" class="btn-primary">Generate Resume</button>
             </form>
         </div>
-
+        
         <div id="generatedResume" class="resume-container hidden">
+
             <div class="resume-content">
                 <div class="resume-left">
                     <div id="profileImage" class="profile-image"></div>
@@ -160,25 +162,28 @@
                         <div id="aboutInfo"></div>
                     </div>
                     <div class="experience-section">
-                        <h2 >Experience</h2>
+                        <h2 class="bor">Experience</h2>
                         <div id="experienceInfo"></div>
                     </div>
                     <div class="skills-section">
-                        <h2>Skills</h2>
+                        <h2 class="bor">Skills</h2>
                         <div id="skillsInfo"></div>
                     </div>
                 </div>
 
             </div>
 
-            <div class="resume-actions">
+          <div class="resume-actions">
                 <button id="editResume" class="btn-secondary">Edit</button>
                 <button id="backToForm" class="btn-secondary">Back</button>
                 <button id="shareResume" class="btn-primary">Share</button>
                 <button id="downloadResume" class="btn-primary">Download pdf</button>
             </div>
         </div>
+        
+
     </div>
     <script src="index.js"></script>
 </body>
+
 </html>
