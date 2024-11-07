@@ -11,131 +11,132 @@
 
 <body>
     <div class="container">
-        <div id="resumeForm" class="form-container">
-            <h1>Resume Builder</h1>
-            <form id="builder-form">
-                <!-- Personal Information -->
-                <div class="form-section">
-                    <h2>Personal Information</h2>
-                    <div class="form-group">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" id="fullName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="profession">Profession Name</label>
-                        <input type="text" id="ProfName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="photo">Profile Photo</label>
-                        <input type="file" id="photo" accept="image/*">
-                    </div>
-                    <div class="form-group">
-                        <label for="about">About Me</label>
-                        <textarea id="about" rows="4"></textarea>
-                    </div>
-                </div>
-
-                <!-- Contact Information -->
-                <div class="form-section">
-                    <h2>Contact Information</h2>
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="website">Website</label>
-                        <input type="url" id="website">
-                    </div>
-                    <div class="form-group">
-                        <label for="address">Address</label>
-                        <textarea id="address" rows="2"></textarea>
-                    </div>
-                </div>
-
-                <!-- Education -->
-                <div class="form-section">
-                    <h2>Education</h2>
-                    <div id="educationFields">
-                        <div class="education-entry">
-                            <div class="form-group">
-                                <label>Degree</label>
-                                <input type="text" class="degree">
-                            </div>
-                            <div class="form-group">
-                                <label>Institution</label>
-                                <input type="text" class="institution">
-                            </div>
-                            <div class="form-group">
-                                <label>Year</label>
-                                <input type="text" class="year">
-                            </div>
+        <div id="formSection">
+            <div id="resumeForm" class="form-container">
+                <h1>Resume Builder</h1>
+                <form id="builder-form">
+                    <!-- Personal Information -->
+                    <div class="form-section">
+                        <h2>Personal Information</h2>
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profession">Profession Name</label>
+                            <input type="text" id="ProfName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="photo">Profile Photo</label>
+                            <input type="file" id="photo" accept="image/*">
+                        </div>
+                        <div class="form-group">
+                            <label for="about">About Me</label>
+                            <textarea id="about" rows="4"></textarea>
                         </div>
                     </div>
-                    <button type="button" id="addEducation" class="btn-secondary">Add Education</button>
-                </div>
 
-                <!-- Experience -->
-                <div class="form-section">
-                    <h2>Experience</h2>
-                    <div id="experienceFields">
-                        <div class="experience-entry">
-                            <div class="form-group">
-                                <label>Position</label>
-                                <input type="text" class="position">
-                            </div>
-                            <div class="form-group">
-                                <label>Company</label>
-                                <input type="text" class="company">
-                            </div>
-                            <div class="form-group">
-                                <label>Duration</label>
-                                <input type="text" class="duration">
-                            </div>
-                            <div class="form-group">
-                                <label>Description</label>
-                                <textarea class="description" rows="3"></textarea>
-                            </div>
+                    <!-- Contact Information -->
+                    <div class="form-section">
+                        <h2>Contact Information</h2>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Website</label>
+                            <input type="url" id="website">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <textarea id="address" rows="2"></textarea>
                         </div>
                     </div>
-                    <button type="button" id="addExperience" class="btn-secondary">Add Experience</button>
-                </div>
 
-                <!-- Skills -->
-                <div class="form-section">
-                    <h2>Skills</h2>
-                    <div class="form-group">
-                        <input type="text" id="skillInput" placeholder="Add skills (comma-separated)">
-                    </div>
-                    <div id="skillTags" class="skill-tags"></div>
-                </div>
-
-                <!-- Languages -->
-                <div class="form-section">
-                    <h2>Languages</h2>
-                    <div id="languageFields">
-                        <div class="language-entry">
-                            <div class="form-group">
-                                <label>Language</label>
-                                <input type="text" class="language">
-                            </div>
-                            <div class="form-group">
-                                <label>Proficiency</label>
-                                <select class="proficiency">
-                                    <option value="Basic">Basic</option>
-                                    <option value="Intermediate">Intermediate</option>
-                                    <option value="Advanced">Advanced</option>
-                                    <option value="Native">Native</option>
-                                </select>
+                    <!-- Education -->
+                    <div class="form-section">
+                        <h2>Education</h2>
+                        <div id="educationFields">
+                            <div class="education-entry">
+                                <div class="form-group">
+                                    <label>Degree</label>
+                                    <input type="text" class="degree">
+                                </div>
+                                <div class="form-group">
+                                    <label>Institution</label>
+                                    <input type="text" class="institution">
+                                </div>
+                                <div class="form-group">
+                                    <label>Year</label>
+                                    <input type="text" class="year">
+                                </div>
                             </div>
                         </div>
+                        <button type="button" id="addEducation" class="btn-secondary">Add Education</button>
                     </div>
-                    <button type="button" id="addLanguage" class="btn-secondary">Add Language</button>
-                </div>
 
-                <button type="submit" class="btn-primary">Generate Resume</button>
-            </form>
+                    <!-- Experience -->
+                    <div class="form-section">
+                        <h2>Experience</h2>
+                        <div id="experienceFields">
+                            <div class="experience-entry">
+                                <div class="form-group">
+                                    <label>Position</label>
+                                    <input type="text" class="position">
+                                </div>
+                                <div class="form-group">
+                                    <label>Company</label>
+                                    <input type="text" class="company">
+                                </div>
+                                <div class="form-group">
+                                    <label>Duration</label>
+                                    <input type="text" class="duration">
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea class="description" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" id="addExperience" class="btn-secondary">Add Experience</button>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="form-section">
+                        <h2>Skills</h2>
+                        <div class="form-group">
+                            <input type="text" id="skillInput" placeholder="Add skills (comma-separated)">
+                        </div>
+                        <div id="skillTags" class="skill-tags"></div>
+                    </div>
+
+                    <!-- Languages -->
+                    <div class="form-section">
+                        <h2>Languages</h2>
+                        <div id="languageFields">
+                            <div class="language-entry">
+                                <div class="form-group">
+                                    <label>Language</label>
+                                    <input type="text" class="language">
+                                </div>
+                                <div class="form-group">
+                                    <label>Proficiency</label>
+                                    <select class="proficiency">
+                                        <option value="Basic">Basic</option>
+                                        <option value="Intermediate">Intermediate</option>
+                                        <option value="Advanced">Advanced</option>
+                                        <option value="Native">Native</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" id="addLanguage" class="btn-secondary">Add Language</button>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Generate Resume</button>
+                </form>
+            </div>
         </div>
-        
         <div id="generatedResume" class="resume-container hidden">
 
             <div class="resume-content">
@@ -173,14 +174,14 @@
 
             </div>
 
-          <div class="resume-actions">
+            <div class="resume-actions">
                 <button id="editResume" class="btn-secondary">Edit</button>
                 <button id="backToForm" class="btn-secondary">Back</button>
                 <button id="shareResume" class="btn-primary">Share</button>
                 <button id="downloadResume" class="btn-primary">Download pdf</button>
             </div>
         </div>
-        
+
 
     </div>
     <script src="index.js"></script>

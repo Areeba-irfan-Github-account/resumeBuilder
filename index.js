@@ -285,6 +285,34 @@ function downloadResume() {
 // Attach the event listener to the download button
 downloadResumeBtn.addEventListener('click', downloadResume);
 
+// function shareResume() {
+//   // Get the generated resume content
+//   const resumeContent = document.getElementById('generatedResume').innerHTML;
+
+//   // Generate a unique ID for the shareable link
+//   const shareableId = generateShareableId();
+
+//   // Store the resume content in localStorage using the shareableId as the key
+//   localStorage.setItem(`resume-${shareableId}`, resumeContent);
+
+//   // Get the current URL and construct the shareable link
+//   const shareableLink = `${window.location.origin}?resume=${shareableId}`;
+
+//   // Display the shareable link or open a sharing modal
+//   alert(`Share your resume: ${shareableLink}`);
+//   // or
+//   // Open a sharing modal and display the shareable link
+// }
+
+// function generateShareableId() {
+//   // Generate a unique ID for the shareable link
+//   return Math.random().toString(36).substring(2, 10);
+// }
+
+// shareResumeBtn.addEventListener('click', shareResume);
+
+
+// Function to generate a unique shareable link
 function shareResume() {
   // Get the generated resume content
   const resumeContent = document.getElementById('generatedResume').innerHTML;
@@ -298,10 +326,8 @@ function shareResume() {
   // Get the current URL and construct the shareable link
   const shareableLink = `${window.location.origin}?resume=${shareableId}`;
 
-  // Display the shareable link or open a sharing modal
+  // Display the shareable link
   alert(`Share your resume: ${shareableLink}`);
-  // or
-  // Open a sharing modal and display the shareable link
 }
 
 function generateShareableId() {
@@ -309,4 +335,30 @@ function generateShareableId() {
   return Math.random().toString(36).substring(2, 10);
 }
 
+// Add event listener to the share button
 shareResumeBtn.addEventListener('click', shareResume);
+
+// Function to load resume based on URL parameter
+function loadSharedResume() {
+  // Check if there's a resume ID in the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const resumeId = urlParams.get('resume');
+
+  if (resumeId) {
+    // Retrieve the resume content from localStorage
+    const savedResume = localStorage.getItem(`resume-${resumeId}`);
+    if (savedResume) {
+      // Display the saved resume content
+      document.getElementById('generatedResume').innerHTML = savedResume;
+      
+      // Hide the form and show the generated resume section
+      document.getElementById('formSection').style.display = 'none';
+      document.getElementById('generatedResume').style.display = 'block';
+    } else {
+      alert('Resume not found.');
+    }
+  }
+}
+
+// Call the function to load the resume if a shareable link is accessed
+window.onload = loadSharedResume;
